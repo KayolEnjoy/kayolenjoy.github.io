@@ -12,6 +12,7 @@ body {
     text-rendering: optimizeLegibility !important;
     background: rgb(240,255,249);
     background: radial-gradient(circle, rgba(240,255,249,1) 0%, rgba(227,240,255,1) 100%);
+    cursor: default;
 }
 
 body, html {
