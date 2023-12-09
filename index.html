@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Auto Change Page</title>
+    <style>
+        html {
+            background-color: hsl(0, 0%, 7%);
+        }
+        body {
+            margin: 0;
+            overflow: hidden;
+        }
+
+        iframe {
+            width: 100vw;
+            height: 100vh;
+            border: none;
+            margin: 0;
+            padding: 0;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="content-container">
+        <!-- Tempat untuk menampilkan halaman -->
+    </div>
+
+    <script>
+        // Daftar halaman yang akan digunakan
+        const pages = ['kodok.html', 'bulus.html'];
+        
+        // Index halaman yang sedang ditampilkan
+        let currentPageIndex = 0;
+
+        // Fungsi untuk mengganti halaman
+        function changePage() {
+            document.getElementById('content-container').innerHTML = '';
+            const iframe = document.createElement('iframe');
+            iframe.src = pages[currentPageIndex];
+            document.getElementById('content-container').appendChild(iframe);
+
+            // Ganti ke halaman berikutnya
+            currentPageIndex = (currentPageIndex + 1) % pages.length;
+        }
+
+        // Set interval untuk memanggil fungsi changePage setiap 4 detik
+        setInterval(changePage, 4000);
+
+        // Panggil fungsi changePage untuk halaman pertama
+        changePage();
+    </script>
+
+</body>
+</html>
