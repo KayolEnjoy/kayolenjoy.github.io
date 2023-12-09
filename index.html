@@ -35,6 +35,7 @@
         
         // Index halaman yang sedang ditampilkan
         let currentPageIndex = 0;
+        let currentTitleIndex = 0;
 
         // Fungsi untuk mengganti halaman
         function changePage() {
@@ -46,12 +47,20 @@
             // Ganti ke halaman berikutnya
             currentPageIndex = (currentPageIndex + 1) % pages.length;
         }
+        function changeTitle() {
+            document.title = titles[currentTitleIndex];
+
+            // Ganti ke judul berikutnya
+            currentTitleIndex = (currentTitleIndex + 1) % titles.length;
+        }
 
         // Set interval untuk memanggil fungsi changePage setiap 4 detik
         setInterval(changePage, 4000);
+        setInterval(changeTitle, 4000);
 
         // Panggil fungsi changePage untuk halaman pertama
         changePage();
+        changeTitle();
     </script>
 
 </body>
