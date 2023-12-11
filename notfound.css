@@ -6,6 +6,10 @@
     font-family: "poppins";
 }
 
+html{
+    cursor: default;
+}
+
 .page_404
 {
     padding: 40px 0;
