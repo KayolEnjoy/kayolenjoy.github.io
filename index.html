@@ -1,67 +1,895 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
+<html lang="id">
+
+  <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kayol Page Now</title>
-    <style>
-        html {
-            background-color: hsl(0, 0%, 7%);
-        }
-        body {
-            margin: 0;
-            overflow: hidden;
-        }
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Meta SEO -->
+    <meta name="title" content="Kayol - Creative Website Builder">
+    <meta name="description" content="Buat website profesional dalam 3-6 hari! Profil perusahaan, blog pribadi, Bisnis UMKM. Harga mulai Rp.300.000. Pilih template favorit Anda!">
+    <meta name="keywords" content="Jasa pembuatan website Pekalongan,Desain web profesional,Pembuatan situs online,Web development Pekalongan,Layanan pembuatan web,Website perusahaan Pekalongan,Web design responsive,SEO-friendly website,Toko online Pekalongan,Pembuatan web murah,Web developer terpercaya,Jasa web terbaik,Web design modern,Bisnis online Pekalongan,Pembuatan website personal,Layanan desain web,Web developer lokal Pekalongan,Website mobile-friendly,Layanan pengembangan web,Toko online profesional,Pembuatan website bisnis,Web design kreatif,Jasa web handal,Solusi website Pekalongan,Desainer web lokal,Website interaktif Pekalongan,Web design dengan user experience baik,Layanan e-commerce Pekalongan,Website custom Pekalongan,Web developer ahli,Desain web yang responsif,Website untuk usaha kecil,Jasa pembuatan blog,Web design dan development,Pembuatan website company profile,Web developer Pekalongan terbaik,Desain web yang menarik,Website dengan performa tinggi,Layanan pembuatan toko onlineWeb design dengan teknologi terkini,Pembuatan website start-up,Web developer dengan pengalaman,Desain web yang bersih,Website untuk promosi produk,Pembuatan website portfolio,Web design dengan integrasi sosial media,Jasa web dengan harga terjangkau,Website dengan keamanan tinggi,Pembuatan website dengan CMS terbaik,Layanan pembuatan website profesional">
+    <meta name="robots" content="index, follow">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta http-equiv="Content-Language" content="id">
+    <meta name="revisit-after" content="2 days">
+    <meta name="author" content="Kayol">
+    <meta name="theme-color" content="hsl(205, 76%, 60%)">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 
-        iframe {
-            width: 100vw;
-            height: 100vh;
-            border: none;
-            margin: 0;
-            padding: 0;
-        }
-    </style>
-</head>
-<body>
+    <title>Kayol - Creative Website Builder</title>
 
-    <div id="content-container">
-        <!-- Tempat untuk menampilkan halaman -->
-    </div>
+    <!-- Favicon -->
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
 
+    <!-- JavaScript Style-->
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <script src=""></script>
     <script>
-        // Daftar halaman yang akan digunakan
-        const pages = ['kodok.html', 'bulus.html'];
-        const titles = ['Preview Website Kayol Yang Akan Launching', 'Maaf Website sedang dalam pembangunan'];
-        
-        // Index halaman yang sedang ditampilkan
-        let currentPageIndex = 0;
-        let currentTitleIndex = 0;
-
-        // Fungsi untuk mengganti halaman
-        function changePage() {
-            document.getElementById('content-container').innerHTML = '';
-            const iframe = document.createElement('iframe');
-            iframe.src = pages[currentPageIndex];
-            document.getElementById('content-container').appendChild(iframe);
-
-            // Ganti ke halaman berikutnya
-            currentPageIndex = (currentPageIndex + 1) % pages.length;
-        }
-        function changeTitle() {
-            document.title = titles[currentTitleIndex];
-
-            // Ganti ke judul berikutnya
-            currentTitleIndex = (currentTitleIndex + 1) % titles.length;
-        }
-
-        // Set interval untuk memanggil fungsi changePage setiap 4 detik
-        setInterval(changePage, 4000);
-        setInterval(changeTitle, 4000);
-
-        // Panggil fungsi changePage untuk halaman pertama
-        changePage();
-        changeTitle();
+        emailjs.init("w9YV4c_k0ab29gwf4");  // Gantilah "user_your_api_key" dengan API Key Anda
     </script>
 
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+
+    <!-- Additional CSS Files -->
+    <link rel="stylesheet" href="assets/css/fontawesome.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/animated.css">
+    <link rel="stylesheet" href="assets/css/owl.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@10">
+
+
+<!--
+  
+                                          ╭╮╭━╮╱╱╱╱╱╱╱╱╱╭╮╱╭━━━╮╱╱╱╱╭╮
+                                          ┃┃┃╭╯╱╱╱╱╱╱╱╱╱┃┃╱┃╭━╮┃╱╱╱╱┃┃
+                                          ┃╰╯╯╭━━┳╮╱╭┳━━┫┃╱┃┃╱╰╋━━┳━╯┣━━╮
+                                          ┃╭╮┃┃╭╮┃┃╱┃┃╭╮┃┃╱┃┃╱╭┫╭╮┃╭╮┃┃━┫
+                                          ┃┃┃╰┫╭╮┃╰━╯┃╰╯┃╰╮┃╰━╯┃╰╯┃╰╯┃┃━┫
+                                          ╰╯╰━┻╯╰┻━╮╭┻━━┻━╯╰━━━┻━━┻━━┻━━╯
+                                          ╱╱╱╱╱╱╱╭━╯┃
+                                          ╱╱╱╱╱╱╱╰━━╯
+
+█▀█ █▀▀ █▀▄▀█ █▄▄ █░█ ▄▀█ ▀█▀   █░█░█ █▀▀ █▄▄ █▀ █ ▀█▀ █▀▀   █▄▀ █▀█ █▀▀ ▄▀█ ▀█▀ █ █▀▀   █▀▄ ▄▀█ █▀█ █   █▄▀ █▀█ ▀█▀ ▄▀█   █▄▄ ▄▀█ ▀█▀ █ █▄▀
+█▀▀ ██▄ █░▀░█ █▄█ █▄█ █▀█ ░█░   ▀▄▀▄▀ ██▄ █▄█ ▄█ █ ░█░ ██▄   █░█ █▀▄ ██▄ █▀█ ░█░ █ █▀░   █▄▀ █▀█ █▀▄ █   █░█ █▄█ ░█░ █▀█   █▄█ █▀█ ░█░ █ █░█
+
+-->
+  </head>
+
+<body>
+
+  <!-- ***** Preloader Start ***** -->
+  <div id="js-preloader" class="js-preloader">
+    <div class="preloader-inner">
+      <span class="dot"></span>
+      <div class="dots">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </div>
+  <!-- ***** Preloader End ***** -->
+
+  <!-- ***** Header Area Start ***** -->
+  <header class="header-area header-sticky wow slideInDown" data-wow-duration="0.75s" data-wow-delay="0s">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <nav class="main-nav">
+            <!-- ***** Logo Start ***** -->
+            <a href="index.html" class="logo">
+              <img loading="lazy" src="assets/images/Logo.png" alt="Logo-kayol">
+            </a>
+            <!-- ***** Logo End ***** -->
+            <!-- ***** Menu Start ***** -->
+            <ul class="nav">
+              <li class="scroll-to-section"><a href="#top" class="active">Beranda</a></li>
+              <li class="scroll-to-section"><a href="#about">Tentang</a></li>
+              <li class="scroll-to-section"><a href="#services">Cek Harga</a></li>
+              <li class="scroll-to-section"><a href="#portfolio">Template</a></li>
+              <!-- <li class="scroll-to-section"><a href="#blog">Blog</a></li> -->
+              <li class="scroll-to-section"><a href="#contact">kontak</a></li> 
+              <li class="scroll-to-section"><div class="border-first-button"><a href="https://wa.me/+62882008025015/"><i class="fa-brands fa-whatsapp"></i> WhatsApp Kami</a></div></li> 
+            </ul>        
+            <i class='menu-trigger'>
+              <span>Menu</span>
+            </i>
+            <!-- ***** Menu End ***** -->
+          </nav>
+        </div>
+      </div>
+    </div>
+  </header>
+  <!-- ***** Header Area End ***** -->
+
+  <div class="main-banner wow fadeIn" id="top" data-wow-duration="1s" data-wow-delay="0.5s">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="row">
+            <div class="col-lg-6 align-self-center">
+              <div class="left-content show-up header-text wow fadeInLeft" data-wow-duration="1s" data-wow-delay="1s">
+                <div class="row">
+                  <div class="col-lg-12">
+                    <h6>Layanan Pembuatan Website <i class="fa-solid fa-globe"></i></h6>
+                    <h2>Kami Membuatkan Website Kreatif untuk Anda</h2>
+                    <p>Tingkatkan online presence bisnis kecil Anda dengan website kreatif kami—sederhana, efektif, dan siap membuka pintu kesuksesan! Hubungi kami sekarang untuk mulai transformasi digital Anda</p>
+                  </div>
+                  <div class="col-lg-12" id="head-hero">
+                    <div class="border-first-button scroll-to-section sempul">
+                      <a href="https://wa.me/+62882008025015/"><i class="fa-brands fa-whatsapp"></i> Chat Kami</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-6">
+              <div class="right-image wow fadeInRight" data-wow-duration="1s" data-wow-delay="0.5s">
+                <img loading="lazy" class="mobile-hidden" src="assets/images/hero.png" alt="home-img">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="about" class="about section">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="row">
+            <div class="col-lg-6">
+              <div class="about-left-image  wow fadeInLeft" data-wow-duration="1s" data-wow-delay="0.5s">
+                <img loading="lazy" src="assets/images/search-kayol.png" alt="apa itu kayol">
+              </div>
+            </div>
+            <div class="col-lg-6 align-self-center  wow fadeInRight" data-wow-duration="1s" data-wow-delay="0.5s">
+              <div class="about-right-content">
+                <div class="section-heading">
+                  <h6>Tentang Kami</h6>
+                  <h4>Apa itu Kayol <em id="changingEmText">Web</em></h4>
+                  <div class="line-dec"></div>
+                </div>
+                <p>Kami, sebagai kelompok pemuda, menghadirkan semangat dan keahlian teknologi untuk memberikan dukungan penuh kepada masyarakat. Dengan dedikasi kami terhadap inovasi digital, kami bertekad untuk menjadi mitra yang dapat diandalkan dalam mewujudkan visi dan keberhasilan teknologi bagi Anda.</p>
+                <div class="row">
+                  <div class="col-lg-4 col-sm-4">
+                    <div class="skill-item first-skill-item wow fadeIn" data-wow-duration="1s" data-wow-delay="0s">
+                      <div class="progress" data-percentage="80">
+                        <span class="progress-left">
+                          <span class="progress-bar"></span>
+                        </span>
+                        <span class="progress-right">
+                          <span class="progress-bar"></span>
+                        </span>
+                        <div class="progress-value">
+                          <div>
+                            80%<br>
+                            <span>Design Web</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-lg-4 col-sm-4">
+                    <div class="skill-item second-skill-item wow fadeIn" data-wow-duration="1s" data-wow-delay="0s">
+                      <div class="progress" data-percentage="90">
+                        <span class="progress-left">
+                          <span class="progress-bar"></span>
+                        </span>
+                        <span class="progress-right">
+                          <span class="progress-bar"></span>
+                        </span>
+                        <div class="progress-value">
+                          <div>
+                            90%<br>
+                            <span>Optimasi SEO</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-lg-4 col-sm-4">
+                    <div class="skill-item third-skill-item wow fadeIn" data-wow-duration="1s" data-wow-delay="0s">
+                      <div class="progress" data-percentage="80">
+                        <span class="progress-left">
+                          <span class="progress-bar"></span>
+                        </span>
+                        <span class="progress-right">
+                          <span class="progress-bar"></span>
+                        </span>
+                        <div class="progress-value">
+                          <div>
+                            80%<br>
+                            <span>Mobile Friendly</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div> 
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="services" class="services section">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="section-heading  wow fadeInDown" data-wow-duration="1s" data-wow-delay="0.5s">
+            <h6>Pelayanan Pembuatan Website Kreatif</h6>
+            <h4>Paket Kelas Di Layanan <em>Kayol</em></h4>
+            <div class="line-dec"></div>
+          </div>
+        </div>
+        <div class="col-lg-12">
+          <div class="naccs">
+            <div class="grid">
+              <div class="row">
+                <div class="col-lg-12">
+                  <div class="menu">
+                    <div class="first-thumb active">
+                      <div class="thumb">
+                        <span class="icon"><img loading="lazy" src="assets/images/kelaaz/service-icon.jpg" alt="Paket Pelajar"></span>
+                        Kelas Pelajar
+                      </div>
+                    </div>
+                    <div>
+                      <div class="thumb">                 
+                        <span class="icon"><img loading="lazy" src="assets/images/kelaaz/service-icon (1).jpg" alt="Paket UMKM"></span>
+                        Kelas UMKM
+                      </div>
+                    </div>
+                    <div>
+                      <div class="thumb">                 
+                        <span class="icon"><img loading="lazy" src="assets/images/kelaaz/service-icon (2).jpg" alt="Paket Bussiness"></span>
+                        Kelas Bisnis
+                      </div>
+                    </div>
+                    <div>
+                      <div class="thumb">                 
+                        <span class="icon"><img loading="lazy" src="assets/images/kelaaz/service-icon (3).jpg" alt="Paket Eksekutif"></span>
+                        Kelas Eksekutif
+                      </div>
+                    </div>
+                    <div class="last-thumb">
+                      <div class="thumb">                 
+                        <span class="icon"><img loading="lazy" src="assets/images/kelaaz/service-icon (4).jpg" alt="Pembayaran"></span>
+                        OnceClear
+                      </div>
+                    </div>
+                  </div>
+                </div> 
+                <div class="col-lg-12">
+                  <ul class="nacc">
+                    <li class="active">
+                      <div>
+                        <div class="thumb">
+                          <div class="row">
+                            <div class="col-lg-6 align-self-center">
+                              <div class="left-text">
+                                <h4><i class="fa-solid fa-splotch"></i> Paket Website Kreatif Dana Pelajar</h4>
+                                <p>Berikan sentuhan kreatif pada bisnis Anda dengan paket jasa pembuatan website kreatif kami yang terjangkau! Dengan desain yang inovatif dan fungsionalitas yang memukau, website Anda akan menjadi wujud dari keberhasilan bisnis Anda</p>
+                                <div class="ticks-list"> <span><i class="fa fa-check"></i> Termasuk Domain</span> <span><i class="fa fa-check"></i> Pembuatan Cepat</span>
+                                  <span><i class="fa fa-check"></i> Garansi Keamanan</span> <span><i class="fa fa-check"></i> Tersedia Template</span></div>
+                                  <div class="colum">
+                                <p>Rp.300.000.00 biaya awal <br> Rp.30.000.00 / Perbulan</p><button onclick="pwkdp()" class="button-29" role="button">Pesan Sekarang</button>
+                                  </div>
+                              </div>
+                            </div>
+                            <div class="col-lg-6 align-self-center">
+                              <div class="right-image">
+                                <img loading="lazy" class="mobile-hidden" src="assets/images/paket/pwkdp.jpg" alt="Website Pelajar">
+                              </div>
+                            </div>
+
+                            <div class="col-lg-6 align-self-center">
+                              <div class="left-text">
+                                <h4><i class="fa-solid fa-splotch"></i> Paket Website Pintar Dana Pelajar</h4>
+                                <p>Bangun kehadiran digital unik untuk bisnismu dengan paket jasa pembuatan website pintar kami! Dapatkan Website dengan penjadwalan tugas tampilan yang canggih dengan harga terjangkau</p>
+                                <div class="ticks-list"> <span><i class="fa fa-check"></i> Termasuk Domain</span> <span><i class="fa fa-check"></i> Pembuatan Cepat</span>
+                                  <span><i class="fa fa-check"></i> Garansi Keamanan</span> <span><i class="fa fa-check"></i> Tersedia Template</span> <span><i class="fa fa-check"></i> Bisa Custom Jadwal</span></div> 
+                                    <div class="colum">
+                                  <p>Rp.400.000.00 biaya awal <br> Rp.40.000.00 / Perbulan</p><button onclick="pwpdp()" class="button-29" role="button">Pesan Sekarang</button>
+                                    </div>
+                              </div>
+                            </div>
+                            <div class="col-lg-6 align-self-center">
+                              <div class="right-image">
+                                <img loading="lazy" class="mobile-hidden" src="assets/images/paket/pwpdp.jpg" alt="Website Kreatif">
+                              </div>
+                            </div>
+                            <p class="warnabiru">keterangan : kelas pelajar memiliki arti kelas paket yang diperuntukkan untuk buget dana seperti pelajar yang tergolong sedikit.Jadi,Bisa dipakai untuk media profil bisnis maupun katalog dan sebagainya</p>
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+                    <li>
+                      <div>
+                        <div class="thumb">
+                          <div class="row">
+                            <div class="col-lg-6 align-self-center">
+                              <div class="left-text">
+                                <h4><i class="fa-solid fa-shop"></i> Paket Usaha Mikro,Kecil dan Menengah Lite</h4>
+                                <p> Dengan paket jasa pembuatan website UMKM kami, kita akan menciptakan kehadiran online yang mengagumkan untuk usaha Anda. Jangan lewatkan kesempatan ini untuk menarik perhatian pelanggan potensial dan meningkatkan visibilitas bisnis Anda. Bersama, kita akan membawa bisnis Anda ke tingkat berikutnya!</p>
+                                <div class="ticks-list"><span><i class="fa fa-check"></i> Optimasi SEO</span> <span><i class="fa fa-check"></i> Termasuk Domain</span> <span><i class="fa fa-check"></i> Garansi Keamanan</span>
+                                  <span><i class="fa fa-check"></i> Bisa Update Konten</span> <span><i class="fa fa-check"></i> Pembuatan Cepat</span> <span><i class="fa fa-check"></i> Mobile Friendly</span>  <span><i class="fa fa-check"></i> Bisa Update Konten</span></div>
+                                <div class="colum">
+                                  <p>Rp.400.000.00 biaya awal <br> Rp.40.000.00 / Perbulan</p><button onclick="umkml()" class="button-29" role="button">Pesan Sekarang</button>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="col-lg-6 align-self-center">
+                              <div class="right-image">
+                                <img loading="lazy" class="mobile-hidden" src="assets/images/paket/umkml.jpg" alt="Website UMKM">
+                              </div>
+                            </div>
+                            <div class="col-lg-6 align-self-center">
+                              <div class="left-text">
+                                <h4><i class="fa-solid fa-shop"></i> Paket Usaha Mikro,Kecil dan Menengah Max</h4>
+                                <p> Dongkrak keberhasilan bisnis UMKM Anda dengan kehadiran digital yang memukau. Dapatkan website profesional yang memikat hati pelanggan dan meningkatkan visibilitas online bisnis Anda. Jadi, tunggu apa lagi? Transformasikan bisnis Anda hari ini!</p>
+                                <div class="ticks-list"><span><i class="fa fa-check"></i> Optimasi SEO</span> <span><i class="fa fa-check"></i> Termasuk Domain</span> <span><i class="fa fa-check"></i> Garansi Keamanan</span> <span><i class="fa fa-check"></i> Bisa Update Konten</span>
+                                  <span><i class="fa fa-check"></i> Pembuatan Cepat</span> <span><i class="fa fa-check"></i> Mobile Friendly</span>  <span><i class="fa fa-check"></i> Bisa Update Konten</span> <span><i class="fa fa-check"></i> Bisa bikin Jadwal pada tampilan</span></div>
+                                <div class="colum">
+                                  <p>Rp.500.000.00 biaya awal <br> Rp.50.000.00 / Perbulan</p><button onclick="umkmm()" class="button-29" role="button">Pesan Sekarang</button>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="col-lg-6 align-self-center">
+                              <div class="right-image">
+                                <img loading="lazy" class="mobile-hidden" src="assets/images/paket/umkmm.jpg" alt="UMKM Kreatif">
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+                    <li>
+                      <div>
+                        <div class="thumb">
+                          <div class="row">
+                            <div class="col-lg-6 align-self-center">
+                              <div class="left-text">
+                                <h4><i class="fa-solid fa-briefcase"></i> Paket ProSite Elite Bussines</h4>
+                                <p>Angkat bisnis Anda ke tingkat berikutnya dengan kehadiran online yang mengesankan! Dapatkan website profesional yang dirancang khusus untuk memperkuat identitas merek dan menarik perhatian pelanggan potensial. Jangan lewatkan peluang untuk meraih kesuksesan digital bersama kami</p>
+                                <div class="ticks-list"><span><i class="fa fa-check"></i> Optimasi SEO</span> <span><i class="fa fa-check"></i> Desain Eksklusif dan Responsif</span> <span><i class="fa fa-check"></i> Mobile Friendly</span> <span><i class="fa fa-check"></i> Pembuatan Cepat</span>
+                                  <span><i class="fa fa-check"></i> Pemeliharaan Rutin</span> <span><i class="fa fa-check"></i> Semua Domain</span> <span><i class="fa fa-check"></i> Garansi Keamanan</span> <span><i class="fa fa-check"></i> Bisa update Konten Tiap Hari</span> <span><i class="fa fa-check"></i> Integrasi Media Sosial</span></div>
+                                <div class="colum">
+                                  <p>Rp.700.000.00 biaya awal <br> Rp.65.000.00 / Perbulan <br> Rp.650.000.00 / Pertahun</p><button onclick="proelite()" class="button-29" role="button">Pesan Sekarang</button>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="col-lg-6 align-self-center">
+                              <div class="right-image">
+                                <img loading="lazy" class="mobile-hidden" src="assets/images/paket/bisnise.jpg" alt="Website Bisnis">
+                              </div>
+                            </div>
+                            <div class="col-lg-6 align-self-center">
+                              <div class="left-text">
+                                <h4><i class="fa-solid fa-briefcase"></i> Paket ProSite Master</h4>
+                                <p>Perkuat eksistensi bisnis Anda dengan kehadiran digital yang profesional. Dapatkan website bisnis kelas atas yang dirancang khusus untuk memenangkan hati pelanggan dan meningkatkan visibilitas Anda secara maksimal. Segera wujudkan impian bisnis Anda bersama layanan pembuatan website kami - bukan sekadar situs, tapi investasi untuk meraih sukses jangka panjang!</p>
+                                <div class="ticks-list"><span><i class="fa fa-check"></i> Optimasi SEO</span> <span><i class="fa fa-check"></i> Tampilan Khusus</span> <span><i class="fa fa-check"></i> Desain Eksklusif dan Responsif</span> <span><i class="fa fa-check"></i> Mobile Friendly</span> <span><i class="fa fa-check"></i> Pembuatan Cepat</span> <span><i class="fa fa-check"></i> Integrasi Media Sosial</span>
+                                  <span><i class="fa fa-check"></i> Pemeliharaan Rutin</span> <span><i class="fa fa-check"></i> Semua Domain</span> <span><i class="fa fa-check"></i> Garansi Keamanan</span> <span><i class="fa fa-check"></i> Bisa update Konten Tiap Hari</span> <span><i class="fa fa-check"></i> Dibuatkan Aplikasi Mobile Non Playstore</span></div>
+                                <div class="colum">
+                                  <p>Rp.700.000.00 biaya awal <br> Rp.70.000.00 / Perbulan <br> Rp.750.000.00 / Pertahun</p><button onclick="promaster()" class="button-29" role="button">Pesan Sekarang</button>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="col-lg-6 align-self-center">
+                              <div class="right-image">
+                                <img loading="lazy" class="mobile-hidden" src="assets/images/paket/bisnism.jpg" alt="Website Bisnis Kreatif">
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+                    <li>
+                      <div>
+                        <div class="thumb">
+                          <div class="row">
+                            <div class="col-lg-6 align-self-center">
+                              <div class="left-text">
+                                <h4><i class="fa-solid fa-rectangle-xmark"></i> Belum Tersedia/Masih Ditambahkan</h4>
+                                <!-- <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sedr do eiusmod deis tempor incididunt ut labore et dolore kengan darwin doerski token.
+                                  dover lipsum lorem and the others.</p>
+                                <div class="ticks-list"><span><i class="fa fa-check"></i> Optimized Template</span> <span><i class="fa fa-check"></i> Data Info</span> <span><i class="fa fa-check"></i> SEO Analysis</span>
+                                  <span><i class="fa fa-check"></i> Data Info</span> <span><i class="fa fa-check"></i> SEO Analysis</span> <span><i class="fa fa-check"></i> Optimized Template</span></div>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sedr do eiusmod deis tempor incididunt.</p>
+                              </div>
+                            </div>
+                            <div class="col-lg-6 align-self-center">
+                              <div class="right-image">
+                                <img loading="lazy" class="mobile-hidden" src="assets/images/services-image-04.jpg" alt="Website Perusahaan">
+                              </div>
+                            </div> -->
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+                    <li>
+                      <div>
+                        <div class="thumb">
+                          <div class="row">
+                            <div class="col-lg-6 align-self-center">
+                              <div class="left-text">
+                                <h4><i class="fa-regular fa-money-bill-1"></i> Pakai Sistem OnceClear</h4>
+                                <p>Berinvestasi dalam kenyamanan dan efisiensi dengan OnceClear. Pembayaran sekali bayar untuk pengalaman tanpa ribet.
+                                  Jangan khawatir tentang biaya bulanan lagi! Dengan OnceClear, Anda hanya perlu membayar sekali untuk mendapatkan layanan kami.
+                                  <br>Yang bisa menggunakan sistem ini
+                                </p>
+                                <div class="ticks-list"><span><i class="fa fa-check"></i> Paket Website Kreatif Dana Pelajar</span> <span><i class="fa fa-check"></i> Paket Website Kreatif Dana Pelajar</span> <span><i class="fa fa-check"></i> Paket Usaha Mikro,Kecil dan Menengah Lite</span>
+                                  <span><i class="fa fa-check"></i> Paket Usaha Mikro,Kecil dan Menengah Max</span> <span><i class="fa fa-check"></i> Paket ProSite Elite Bussines</span></div>
+                                  <div class="colum">
+                                    <p>Kelas Pelajar : Rp.3.000.000 <br>
+                                        kelas UMKM : Rp.6.100.000 <br>
+                                          kelas Bisnis : Rp.8.350.000</p>
+                                          <button onclick="OnceClear()" class="button-29" role="button">Pakai OnceClear</button>
+                                  </div>
+                              </div>
+                            </div>
+                            <div class="col-lg-6 align-self-center">
+                              <div class="right-image">
+                                <img loading="lazy" class="mobile-hidden" src="assets/images/paket/onceclear.jpg" alt="Bayar Sekali">
+                                <p>Garansi : 2 Tahun setelah pemesanan</p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+                  </ul>
+                </div> 
+                <section class="brands-sec">
+                  <div class="container">
+                      <div class="row">
+                          <div class="col-lg-12">
+                              <div class="brand-title mb-5">
+                                  <h5 class="h5-title">Pembayaran Hanya Bisa Menggunakan</h5>
+                              </div>
+                              <div class="brands-row">
+                                  <div class="brands-box">
+                                      <img src="assets/images/pembayaran/cash.png" alt="kayolcash">
+                                  </div>
+                                  <div class="brands-box">
+                                      <img src="assets/images/pembayaran/dana.png" alt="kayoldana">
+                                  </div>
+                                  <div class="brands-box">
+                                      <img src="assets/images/pembayaran/qris.png" alt="kayolqris">
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </section>       
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  
+  <div id="free-quote" class="free-quote">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-4 offset-lg-4">
+          <div class="section-heading  wow fadeIn" data-wow-duration="1s" data-wow-delay="0.3s">
+            <h6>Cek website anda</h6>
+            <h4>Cek website yang terdaftar di kami</h4>
+            <div class="line-dec"></div>
+          </div>
+        </div>
+        <div class="col-lg-8 offset-lg-2  wow fadeIn" data-wow-duration="1s" data-wow-delay="0.8s">
+          <form>
+            <div class="row">
+              <div class="col-lg-4 col-sm-4">
+                <fieldset>
+                  <input type="text" id="websiteName" class="website" placeholder="Website Anda..." name="websiteName" required>
+                </fieldset>
+              </div>
+              <div class="col-lg-4 col-sm-4">
+                <fieldset>
+                  <input type="email" name="address" id="emailname" class="email" placeholder="Email Anda..." name="emailname" required>
+                </fieldset>
+              </div>
+              <div class="col-lg-4 col-sm-4">
+                <fieldset>
+                  <button type="submit" class="main-button" onclick="checkWebsite(event)"><i class="fa-solid fa-magnifying-glass"></i> Cek Sekarang</button>
+                </fieldset>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div id="portfolio" class="our-portfolio section">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-5">
+          <div class="section-heading wow fadeInLeft" data-wow-duration="1s" data-wow-delay="0.3s">
+            <h6>Menu Template</h6>
+            <h4><em><a href="https://kayol.site/pilihtemplate/" class="template" onclick="pilihtemplate()">Pilih Template</a></em> yang anda suka</h4>
+            <div class="line-dec"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="targetDiv" class="container-fluid wow fadeIn" data-wow-duration="1s" data-wow-delay="0.7s">
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="loop owl-carousel">
+            <div class="item">
+              <a href="#">
+                <div class="portfolio-item">
+                <div class="thumb">
+                  <img loading="lazy" src="assets/images/portfolio-01.jpg" alt="">
+                </div>
+                <div class="down-content">
+                  <h4>Website Builder</h4>
+                  <span>Marketing</span>
+                </div>
+              </div>
+              </a>  
+            </div>
+            <div class="item">
+              <a href="#">
+                <div class="portfolio-item">
+                <div class="thumb">
+                  <img loading="lazy" src="assets/images/portfolio-01.jpg" alt="">
+                </div>
+                <div class="down-content">
+                  <h4>Website Builder</h4>
+                  <span>Marketing</span>
+                </div>
+              </div>
+              </a>  
+            </div>
+            <div class="item">
+              <a href="#">
+                <div class="portfolio-item">
+                <div class="thumb">
+                  <img loading="lazy" src="assets/images/portfolio-02.jpg" alt="">
+                </div>
+                <div class="down-content">
+                  <h4>Website Builder</h4>
+                  <span>Marketing</span>
+                </div>
+              </div>
+              </a>  
+            </div>
+            <div class="item">
+              <a href="#">
+                <div class="portfolio-item">
+                <div class="thumb">
+                  <img loading="lazy" src="assets/images/portfolio-03.jpg" alt="">
+                </div>
+                <div class="down-content">
+                  <h4>Website Builder</h4>
+                  <span>Marketing</span>
+                </div>
+              </div>
+              </a>  
+            </div>
+            <div class="item">
+              <a href="#">
+                <div class="portfolio-item">
+                <div class="thumb">
+                  <img loading="lazy" src="assets/images/portfolio-04.jpg" alt="">
+                </div>
+                <div class="down-content">
+                  <h4>Website Builder</h4>
+                  <span>Marketing</span>
+                </div>
+              </div>
+              </a>  
+            </div>
+            <div class="item">
+              <a href="#">
+                <div class="portfolio-item">
+                <div class="thumb">
+                  <img loading="lazy" src="assets/images/portfolio-02.jpg" alt="">
+                </div>
+                <div class="down-content">
+                  <h4>Website Builder</h4>
+                  <span>Marketing</span>
+                </div>
+              </div>
+              </a>  
+            </div>
+            <div class="item">
+              <a href="#">
+                <div class="portfolio-item">
+                <div class="thumb">
+                  <img loading="lazy" src="assets/images/portfolio-02.jpg" alt="">
+                </div>
+                <div class="down-content">
+                  <h4>Website Builder</h4>
+                  <span>Marketing</span>
+                </div>
+              </div>
+              </a>  
+            </div>
+            <div class="item">
+              <a href="#">
+                <div class="portfolio-item">
+                <div class="thumb">
+                  <img loading="lazy" src="assets/images/portfolio-01.jpg" alt="">
+                </div>
+                <div class="down-content">
+                  <h4>Website Builder</h4>
+                  <span>Marketing</span>
+                </div>
+              </div>
+              </a>  
+            </div>
+            <div class="item">
+              <a href="#">
+                <div class="portfolio-item">
+                <div class="thumb">
+                  <img loading="lazy" src="assets/images/portfolio-03.jpg" alt="">
+                </div>
+                <div class="down-content">
+                  <h4>Website Builder</h4>
+                  <span>Marketing</span>
+                </div>
+              </div>
+              </a>  
+            </div>
+            <div class="item">
+              <a href="#">
+                <div class="portfolio-item">
+                <div class="thumb">
+                  <img loading="lazy" src="assets/images/portfolio-04.jpg" alt="">
+                </div>
+                <div class="down-content">
+                  <h4>Website Builder</h4>
+                  <span>Marketing</span>
+                </div>
+              </div>
+              </a>  
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- <div id="blog" class="blog">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-4 offset-lg-4  wow fadeInDown" data-wow-duration="1s" data-wow-delay="0.3s">
+          <div class="section-heading">
+            <h6>Contoh Website</h6>
+            <h4>Yang di kerjakan oleh <em>Layanan Kami</em></h4>
+            <div class="line-dec"></div>
+          </div>
+        </div>
+        <div class="col-lg-6 show-up wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.3s">
+          <div class="blog-post">
+            <div class="thumb">
+              <a href="#"><img loading="lazy" src="assets/images/mobile.png" alt="YellowNet"></a>
+            </div>
+            <div class="down-content">
+              <span class="category">YellowNet</span>
+              <span class="date">03 Desember 2023</span>
+              <a href="#"><h4>Project Website CCTV dan Internet YellowNet Pekalongan</h4></a>
+              <p>Selesai menggunakan paket ProSite Elite Bussiness dengan memakai sistem pembayaran OnceClear. Dengan waktu 5 hari website ini langsung jadi dan online sampai sekarang.</p>
+              <span class="author"><img loading="lazy" src="assets/images/author-post.jpg" alt="">By: Siti Mringis</span>
+              <div class="border-first-button"><a href="#">Kunjungi Situs</a></div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6 wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.3s">
+          <div class="blog-posts">
+            <div class="row">
+              <!-- <div class="col-lg-12">
+                <div class="post-item">
+                  <div class="thumb">
+                    <a href="#"><img loading="lazy" src="assets/images/blog-post-02.jpg" alt=""></a>
+                  </div>
+                  <div class="right-content">
+                    <span class="category">SEO Analysis</span>
+                    <span class="date">24 September 2021</span>
+                    <a href="#"><h4>Lorem Ipsum Dolor Sit Amei Eiusmod Tempor</h4></a>
+                    <p>Lorem ipsum dolor sit amet, cocteturi adipiscing eliterski.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-12">
+                <div class="post-item">
+                  <div class="thumb">
+                    <a href="#"><img loading="lazy" src="assets/images/blog-post-03.jpg" alt=""></a>
+                  </div>
+                  <div class="right-content">
+                    <span class="category">SEO Analysis</span>
+                    <span class="date">24 September 2021</span>
+                    <a href="#"><h4>Lorem Ipsum Dolor Sit Amei Eiusmod Tempor</h4></a>
+                    <p>Lorem ipsum dolor sit amet, cocteturi adipiscing eliterski.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-12">
+                <div class="post-item last-post-item">
+                  <div class="thumb">
+                    <a href="#"><img loading="lazy" src="assets/images/blog-post-04.jpg" alt=""></a>
+                  </div>
+                  <div class="right-content">
+                    <span class="category">SEO Analysis</span>
+                    <span class="date">24 September 2021</span>
+                    <a href="#"><h4>Lorem Ipsum Dolor Sit Amei Eiusmod Tempor</h4></a>
+                    <p>Lorem ipsum dolor sit amet, cocteturi adipiscing eliterski.</p>
+                  </div>
+                </div>
+              </div>  
+              <div class="col-lg-12">
+                <div class="post-item last-post-item">
+                  <div class="thumb">
+                    <a href="#"><img loading="lazy" src="assets/images/blogno.jpg" alt="Website Tanpa Izin"></a>
+                  </div>
+                  <div class="right-content">
+                    <a href="#"><h4>Ada 5 website lainnya yang kami kerjakan</h4></a>
+                    <p>Sayangnya tidak dapat izin untuk ditampilkannya di layanan kami</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>   -->
+
+  <div id="contact" class="contact-us section">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6 offset-lg-3">
+          <div class="section-heading wow fadeIn" data-wow-duration="1s" data-wow-delay="0.5s">
+            <h6>Kontak Kami</h6>
+            <h4>Hubungi <em><a class="warna-biru cursor-pointer" href="https://kayol.site/">Kayol</a></em> Sekarang</h4>
+            <div class="line-dec"></div>
+          </div>
+        </div>
+        <div class="col-lg-12 wow fadeInUp" data-wow-duration="0.5s" data-wow-delay="0.25s">
+          <form id="contact" action="" method="post">
+            <div class="row">
+              <div class="col-lg-12">
+                <div class="contact-dec">
+                  <img loading="lazy" class="mobile-hidden contact-img" src="assets/images/contact.png" alt="Kontak Kayol">
+                </div>
+              </div>
+              <div class="col-lg-5">
+                <div id="map">
+                  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7921.7208451230035!2d109.65372863827743!3d-6.907288721359384!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e7026a1e373118b%3A0x3f0bdb3cbbb15843!2sPringlangu%2C%20Kec.%20Pekalongan%20Bar.%2C%20Kota%20Pekalongan%2C%20Jawa%20Tengah!5e0!3m2!1sid!2sid!4v1702789043341!5m2!1sid!2sid" width="100%" height="636px" frameborder="0" style="border:0" allowfullscreen></iframe>
+                </div>
+              </div>
+              <div class="col-lg-7">
+                <div class="fill-form">
+                  <div class="row">
+                    <div class="col-lg-4">
+                      <div class="info-post">
+                        <div class="icon">
+                          <img loading="lazy" src="assets/images/phone-icon.png" alt="Nomor Telepon Kayol">
+                          <a href="tel:+62882008025015">Hubungi Kayol</a>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-lg-4">
+                      <div class="info-post">
+                        <div class="icon">
+                          <img loading="lazy" src="assets/images/email-icon.png" alt="Email Kayol">
+                          <a href="mailto:websitepekalongan">Email Kayol</a>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-lg-4">
+                      <div class="info-post">
+                        <div class="icon">
+                          <img loading="lazy" src="assets/images/location-icon.png" alt="Alamat Kayol">
+                          <a href="https://maps.app.goo.gl/BPTKViiVE8nMgcpS6">Alamat Kayol</a>
+                        </div>
+                      </div>
+                    </div>
+                    <form id="contactForm">
+                      <div class="col-lg-6">
+                          <fieldset>
+                              <input type="text" name="name" id="name" placeholder="Name" autocomplete="on" required>
+                          </fieldset>
+                          <fieldset>
+                              <input type="email" name="email" id="email" placeholder="Your Email" required>
+                          </fieldset>
+                          <fieldset>
+                              <input type="text" name="subject" id="subject" placeholder="Subject" autocomplete="on" required>
+                          </fieldset>
+                      </div>
+                      <div class="col-lg-6">
+                          <fieldset>
+                              <textarea name="message" class="form-control" id="message" placeholder="Message" required></textarea>  
+                          </fieldset>
+                      </div>
+                      <div class="col-lg-12">
+                          <fieldset>
+                              <button type="button" onclick="sendEmail()" class="submitBtn"><i class="fa-regular fa-envelope"></i> Kirim Pesan Sekarang</button>
+                          </fieldset>
+                      </div> 
+                  </form>
+                  <div id="alertBox" class="alert"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <p>Copyright © 2023 KayolCode Co., Ltd. All Rights Reserved. 
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <button id="scrollUpBtn" onclick="scrollToTop()">
+    <i class="fas fa-chevron-up"></i>
+  </button>
+
+    <script>
+            var schemaData = {
+          "@context": "http://schema.org",
+          "@type": "LocalBusiness",
+          "name": "KayolCode",
+          "description": "Harga mulai dari Rp.300.000.00",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Pringlangu gg4 Pekalongan Barat",
+            "addressLocality": "Pekalongan",
+            "postalCode": "51113",
+            "addressCountry": "Indonesia"
+          },
+          "contactPoint": {
+            "@type": "ContactPoint",
+            "telephone": "+62-882008025015",
+            "contactType": "Customer Service"
+          },
+          "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "4.6",
+            "reviewCount": "47"
+          }
+        };
+        
+        // Menambahkan markup ke halaman
+        var script = document.createElement('script');
+        script.type = 'application/ld+json';
+        script.textContent = JSON.stringify(schemaData);
+        document.head.appendChild(script);
+    </script>
+  <!-- Scripts -->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/owl-carousel.js"></script>
+  <script src="assets/js/animation.js"></script>
+  <script src="assets/js/imagesloaded.js"></script>
+  <script src="assets/js/custom.js"></script>
+  <script src="assets/js/script.js"></script>
 </body>
 </html>
