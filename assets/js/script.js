@@ -157,21 +157,88 @@ window.addEventListener('scroll', function() {
 function OnceClear() {
     window.location.href = "https://wa.me/p/7131142943634243/62882008025015";
 }
-function promaster() {
-    window.location.href = "https://wa.me/p/24618680101110523/62882008025015";
-}
-function proelite() {
-    window.location.href = "https://wa.me/p/7297318190357905/62882008025015";
-}
-function umkmm() {
-    window.location.href = "https://wa.me/p/7318256424865338/62882008025015";
-}
-function umkml() {
-    window.location.href = "https://wa.me/p/7190261794367300/62882008025015";
-}
-function pwpdp() {
-    window.location.href = "https://wa.me/p/6791249480984659/62882008025015";
-}
-function pwkdp() {
-    window.location.href = "https://wa.me/p/6902576269855350/62882008025015";
-}
+// Link To CheckOut
+
+  function pesanProduk(namaProduk) {
+    // Gantilah dengan nilai ID service dan ID template yang sesuai
+    const emailServiceId = 'service_b6er7nz';
+    const emailTemplateId = 'template_8h3fkjs';
+    const emailPublicKey = 'gtkqYU-0qi7HMZqVV';
+
+    emailjs.init(emailPublicKey);
+
+    // Cek apakah pelanggan sudah pernah memesan
+    if (localStorage.getItem('SudahPesan')) {
+      Swal.fire({
+        icon: 'error',
+        title: 'Maaf!',
+        text: 'Anda tidak dapat memesan lagi karena Anda sudah pernah memesan.Mohon tunggu konfirmasi dari kami perihal pesanan tersebut!',
+      });
+      return;
+    }
+
+    // Tampilkan formulir pemesanan dengan SweetAlert2
+    Swal.fire({
+      title: 'Pemesanan ' + namaProduk,
+      html:
+        '<input type="text" id="nama" class="swal2-input" placeholder="Nama Anda">' +
+        '<input type="tel" id="whatsapp" class="swal2-input" placeholder="Nomor WhatsApp anda">',
+      showCancelButton: true,
+      confirmButtonText: 'Pesan Sekarang',
+      showLoaderOnConfirm: true,
+      preConfirm: () => {
+        const nama = Swal.getPopup().querySelector('#nama').value;
+        const whatsapp = Swal.getPopup().querySelector('#whatsapp').value;
+
+        // Kirim data ke email.js
+        return emailjs.send(emailServiceId, emailTemplateId, {
+          to_name: nama,
+          to_whatsapp: whatsapp,
+          produk: namaProduk,
+        });
+      },
+      allowOutsideClick: () => !Swal.isLoading(),
+    }).then((result) => {
+      if (result.isConfirmed) {
+        Swal.fire({
+          icon: 'success',
+          title: 'Terima Kasih!',
+          text: 'Pesanan Anda telah berhasil dikirim. Tunggu konfirmasi dari kami di WhatsApp Anda.',
+        });
+        // Tandai bahwa pelanggan sudah memesan
+        localStorage.setItem('sudahPesan', true);
+      } else if (result.isDenied) {
+        Swal.fire('Pesanan Gagal', 'Maaf, pesanan Anda tidak terkirim.', 'error');
+      }
+    });
+  }
+
+//Download katalog
+
+  function downloadKatalog() {
+    // Tampilkan SweetAlert "Tunggu sebentar..."
+    Swal.fire({
+      title: 'Tunggu Sebentar...',
+      text: 'Sedang menyiapkan katalog untuk diunduh.',
+      showConfirmButton: false,
+      allowOutsideClick: false,
+      timer: 3000, // 3 detik
+      onBeforeOpen: () => {
+        Swal.showLoading();
+      },
+    });
+
+    // Tunggu 3 detik sebelum mengunduh file
+    setTimeout(() => {
+      // Simulasi pengunduhan file (ganti URL sesuai dengan lokasi file)
+      const downloadLink = document.createElement('a');
+      downloadLink.href = 'https://kayol.site/assets/katalog.pdf';
+      downloadLink.download = 'katalog.pdf';
+      document.body.appendChild(downloadLink);
+      downloadLink.click();
+      document.body.removeChild(downloadLink);
+
+      // Tutup SweetAlert setelah pengunduhan selesai
+      Swal.close();
+    }, 3000);
+  }
