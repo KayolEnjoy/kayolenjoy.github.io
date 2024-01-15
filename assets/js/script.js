@@ -20,7 +20,7 @@ document.addEventListener("DOMContentLoaded", function() {
         currentIndex = (currentIndex + 1) % textOptions.length;
     }
 
-    setInterval(changeText, 000); // Ubah teks setiap 4 detik
+    setInterval(changeText, 7000); // Ubah teks setiap 4 detik
 });
 // Fungsi untuk menggulir ke atas
 function scrollToTop() {
