@@ -1681,6 +1681,119 @@ button:hover {
   color: #fff;
 }
 
+/* ------------------------
+CheckOut Rules
+------------------------ */
+.checkout {
+  text-align: left;
+  position: relative;
+  z-index: 2;
+}
+
+.checkout p {
+  color: white;
+}
+
+.checkout .section-heading .line-dec {
+  margin-left: 0;
+  background-color: #fff;
+}
+
+.checkout .section-heading {
+  margin-bottom: 50px;
+}
+
+.checkout .main-button {
+  text-align: right;
+}
+
+.checkout .item {
+  margin-top: 30px;
+  position: relative;
+}
+
+.checkout .first-item .number {
+  position: absolute;
+  right: 0;
+  top: -20px;
+}
+
+.checkout .first-item:after {
+  position: absolute;
+  width: 1px;
+  height: 95%;
+  background-color: rgba(255, 255, 255, 0.2);
+  content: '';
+  right: 5px;
+  top: 5%;
+}
+
+.checkout .second-item .number {
+  position: absolute;
+  right: 0;
+  top: -20px;
+}
+
+.checkout .second-item:after {
+  position: absolute;
+  width: 1px;
+  height: 95%;
+  background-color: rgba(255, 255, 255, 0.2);
+  content: '';
+  right: 5px;
+  top: 5%;
+}
+
+.item .icon {
+  width: 300px;
+  display: inline-block;
+  text-align: center;
+  line-height: 62px;
+  background-color: #fff;
+  border-radius: 100px;
+}
+
+.checkout .item .icon img {
+  max-width: 100%;
+}
+
+.checkout .col-lg-4 h4  {
+  color: #fff;
+  font-weight: bolder;
+  margin-top: 30px;
+  margin-bottom: 15px;
+}
+
+.checkout p {
+  margin-right: 30px;
+}
+
+.checkout .item a {
+  color: rgb(215, 245, 255);
+}
+.hidden {
+  display: none;
+}
+
+.button-11 {
+  padding: 6px 14px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Roboto', sans-serif;
+  border-radius: 6px;
+  color: #3D3D3D;
+  background: #fff;
+  border: none;
+  box-shadow: 0px 0.5px 1px rgba(0, 0, 0, 0.1);
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.button-11:hover {
+  box-shadow: 0px 0.5px 1px rgba(0, 0, 0, 0.1), 0px 0px 0px 3.5px #5cc3ff38;
+  outline: 0;
+  background: #29aafe;
+  color: #fff;
+}
 
 /* 
 ---------------------------------------------
@@ -2356,6 +2469,9 @@ responsive
   form#contact {
     padding: 45px;
   }
+  .checkout .hidden {
+    display: block;
+  }
 }
 
 @media (max-width: 767px) {
@@ -2424,6 +2540,24 @@ responsive
   }
   .brands-row {
       margin: 0 -25px;
+  }
+  .checkout p {
+    margin-right: 0;
+  }
+  .checkout {
+    text-align: center;
+  }
+  .checkout .hidden {
+    display: block;
+  }
+  .checkout .section-heading .line-dec {
+    margin: 0 auto;
+  }
+  .checkout .section-heading {
+    text-align: center;
+  }
+  .checkout .main-button .button-11 {
+    display: none;
   }
   .our-portfolio .section-heading,
   .about-us .section-heading,
