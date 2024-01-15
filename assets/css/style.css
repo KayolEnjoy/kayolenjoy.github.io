@@ -1750,11 +1750,12 @@ CheckOut Rules
   text-align: center;
   line-height: 62px;
   background-color: #fff;
-  border-radius: 100px;
+  border-radius: 5%;
 }
 
 .checkout .item .icon img {
   max-width: 100%;
+  border-radius: 5%;
 }
 
 .checkout .col-lg-4 h4  {
