@@ -10,6 +10,18 @@ document.addEventListener("DOMContentLoaded", function() {
 
     setInterval(changeText, 4000); // Ubah teks setiap 4 detik
 });
+document.addEventListener("DOMContentLoaded", function() {
+    const changingEmTextElement = document.getElementById("changingEmTitle");
+    const textOptions = ["Kreatif", "Pintar ", "Bisnis", "Umkm", "Portfolio"];
+    let currentIndex = 0;
+
+    function changeText() {
+        changingEmTextElement.innerHTML = textOptions[currentIndex];
+        currentIndex = (currentIndex + 1) % textOptions.length;
+    }
+
+    setInterval(changeText, 000); // Ubah teks setiap 4 detik
+});
 // Fungsi untuk menggulir ke atas
 function scrollToTop() {
     window.scrollTo({
