@@ -1,8 +1,6 @@
 /*
 
- 568 Kayol
-
-https://.com/tm-568-Kayol
+KAYOL CODE SEMANGAT INOVASI
 
 */
 
@@ -2614,6 +2612,9 @@ responsive
       margin: 0 -15px;
       flex-wrap: wrap;
       justify-content: center;
+  }
+  .checkout .number {
+    display: none;
   }
 }
 /* Membuat scrollbar tipis dengan desain keren */
