@@ -164,11 +164,6 @@ window.addEventListener('scroll', function() {
     clearTimeout(timeout);
 });
 
-// Link To Katalog WhatsApp
-
-function OnceClear() {
-    window.location.href = "https://wa.me/p/7131142943634243/62882008025015";
-}
 // Link To CheckOut
 
   function pesanProduk(namaProduk) {
@@ -194,7 +189,9 @@ function OnceClear() {
       title: 'Pemesanan ' + namaProduk,
       html:
         '<input type="text" id="nama" class="swal2-input" placeholder="Nama Anda">' +
-        '<input type="tel" id="whatsapp" class="swal2-input" placeholder="Nomor WhatsApp anda">',
+        '<input type="tel" id="whatsapp" class="swal2-input" placeholder="Nomor WhatsApp anda">' +
+        '<p>*Jika ingin menggunakan OnceClear anda tidak perlu mengisi formulir ini. Langsung ke tab OnceClear saja</p>' ,
+        
       showCancelButton: true,
       confirmButtonText: 'Pesan Sekarang',
       showLoaderOnConfirm: true,
@@ -218,7 +215,65 @@ function OnceClear() {
           text: 'Pesanan Anda telah berhasil dikirim. Tunggu konfirmasi dari kami di WhatsApp Anda.',
         });
         // Tandai bahwa pelanggan sudah memesan
-        localStorage.setItem('sudahPesan', true);
+        localStorage.setItem('SudahPesan', true);
+      } else if (result.isDenied) {
+        Swal.fire('Pesanan Gagal', 'Maaf, pesanan Anda tidak terkirim.', 'error');
+      }
+    });
+  }
+// Link To OnceClear
+
+  function OnceClear(namaProduk) {
+    // Gantilah dengan nilai ID service dan ID template yang sesuai
+    const emailServiceId = 'service_b6er7nz';
+    const emailTemplateId = 'template_8nxwjvo';
+    const emailPublicKey = 'gtkqYU-0qi7HMZqVV';
+
+    emailjs.init(emailPublicKey);
+
+    // Cek apakah pelanggan sudah pernah memesan
+    if (localStorage.getItem('SudahPesan')) {
+      Swal.fire({
+        icon: 'error',
+        title: 'Maaf!',
+        text: 'Anda tidak dapat memesan lagi karena Anda sudah pernah memesan.Mohon tunggu konfirmasi dari kami perihal pesanan tersebut!',
+      });
+      return;
+    }
+
+    // Tampilkan formulir pemesanan dengan SweetAlert2
+    Swal.fire({
+      title: 'Pakai Metode ' + namaProduk,
+      html:
+        '<input type="text" id="nama" class="swal2-input" placeholder="Nama anda">' +
+        '<input type="tel" id="paket" class="swal2-input" placeholder="Paket yang dibeli">' +
+        '<input type="tel" id="whatsapp" class="swal2-input" placeholder="Nomor WhatsApp anda">',
+      showCancelButton: true,
+      confirmButtonText: 'Pesan Sekarang',
+      showLoaderOnConfirm: true,
+      preConfirm: () => {
+        const nama = Swal.getPopup().querySelector('#nama').value;
+        const paket = Swal.getPopup().querySelector('#paket').value;
+        const whatsapp = Swal.getPopup().querySelector('#whatsapp').value;
+
+        // Kirim data ke email.js
+        return emailjs.send(emailServiceId, emailTemplateId, {
+          to_name: nama,
+          to_package: paket,
+          to_whatsapp: whatsapp,
+          metode: namaProduk,
+        });
+      },
+      allowOutsideClick: () => !Swal.isLoading(),
+    }).then((result) => {
+      if (result.isConfirmed) {
+        Swal.fire({
+          icon: 'success',
+          title: 'Terima Kasih!',
+          text: 'Pesanan Anda telah berhasil dikirim. Tunggu konfirmasi dari kami di WhatsApp Anda.',
+        });
+        // Tandai bahwa pelanggan sudah memesan
+        localStorage.setItem('SudahPesan', true);
       } else if (result.isDenied) {
         Swal.fire('Pesanan Gagal', 'Maaf, pesanan Anda tidak terkirim.', 'error');
       }
