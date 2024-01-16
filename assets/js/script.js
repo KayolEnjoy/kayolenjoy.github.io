@@ -60,7 +60,8 @@ function checkWebsite(event) {
         const registeredWebsites = [
             { websiteName: 'lmao.shop', emailname: 'sugichanel@gmail.com' },
             { websiteName: 'sukiroku.online', emailname: 'jancokpedia@gmail.com' },
-            { websiteName: 'bibitrakyat.com', emailname: 'indonesiatanam@gmail.com' }
+            { websiteName: 'bibitrakyat.com', emailname: 'indonesiatanam@gmail.com' },
+            { websiteName: 'yellownetcctv.com', emailname: 'yellownetcctv@gmail.com' }
         ];
 
         const websiteNameInput = document.getElementById('websiteName').value;
