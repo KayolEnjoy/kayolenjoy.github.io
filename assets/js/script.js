@@ -20,7 +20,19 @@ document.addEventListener("DOMContentLoaded", function() {
         currentIndex = (currentIndex + 1) % textOptions.length;
     }
 
-    setInterval(changeText, 7000); // Ubah teks setiap 4 detik
+    setInterval(changeText, 7000); // Ubah teks setiap 7 detik
+});
+document.addEventListener("DOMContentLoaded", function() {
+  const changingEmTextElement = document.getElementById("changingEmBest");
+  const textOptions = ["palinglaku", "bestseller", "rekomendasi"];
+  let currentIndex = 0;
+
+  function changeText() {
+      changingEmTextElement.innerHTML = textOptions[currentIndex];
+      currentIndex = (currentIndex + 1) % textOptions.length;
+  }
+
+  setInterval(changeText, 1500); // Ubah teks setiap 1,5 detik
 });
 // Fungsi untuk menggulir ke atas
 function scrollToTop() {
@@ -60,8 +72,7 @@ function checkWebsite(event) {
         const registeredWebsites = [
             { websiteName: 'lmao.shop', emailname: 'sugichanel@gmail.com' },
             { websiteName: 'sukiroku.online', emailname: 'jancokpedia@gmail.com' },
-            { websiteName: 'bibitrakyat.com', emailname: 'indonesiatanam@gmail.com' },
-            { websiteName: 'yellownetcctv.com', emailname: 'yellownetcctv@gmail.com' }
+            { websiteName: 'bibitrakyat.com', emailname: 'indonesiatanam@gmail.com' }
         ];
 
         const websiteNameInput = document.getElementById('websiteName').value;
@@ -284,29 +295,65 @@ window.addEventListener('scroll', function() {
 //Download katalog
 
   function downloadKatalog() {
-    // Tampilkan SweetAlert "Tunggu sebentar..."
     Swal.fire({
-      title: 'Tunggu Sebentar...',
-      text: 'Sedang menyiapkan katalog untuk diunduh.',
-      showConfirmButton: false,
-      allowOutsideClick: false,
-      timer: 3000, // 3 detik
-      onBeforeOpen: () => {
-        Swal.showLoading();
-      },
+      title: "Mau lihat katalog dari mana?",
+      showDenyButton: true,
+      showCloseButton: true,
+      denyButtonColor: "#3085d6",
+      confirmButtonText: "Download Katalog",
+      denyButtonText: `Katalog di Whatsapp`
+    }).then((result) => {
+      /* Read more about isConfirmed, isDenied below */
+      if (result.isConfirmed) {
+        Swal.fire({
+          title: 'Tunggu Sebentar...',
+          text: 'Sedang menyiapkan katalog untuk diunduh.',
+          showConfirmButton: false,
+          allowOutsideClick: false,
+          timer: 3000, // 3 detik
+          onBeforeOpen: () => {
+            Swal.showLoading();
+          },
+        });
+    
+        // Tunggu 3 detik sebelum mengunduh file
+        setTimeout(() => {
+          // Simulasi pengunduhan file (ganti URL sesuai dengan lokasi file)
+          const downloadLink = document.createElement('a');
+          downloadLink.href = 'https://kayol.site/assets/katalog.pdf';
+          downloadLink.download = 'katalog.pdf';
+          document.body.appendChild(downloadLink);
+          downloadLink.click();
+          document.body.removeChild(downloadLink);
+    
+          // Tutup SweetAlert setelah pengunduhan selesai
+          Swal.close();
+        }, 3000);
+      } else if (result.isDenied) {
+        Swal.fire({
+          title: 'Tunggu Sebentar...',
+          text: 'Menuju Ke Katalog Whatsapp',
+          showConfirmButton: false,
+          allowOutsideClick: false,
+          timer: 1000, // 1 detik
+          onBeforeOpen: () => {
+            Swal.showLoading();
+          },
+        });
+    
+        // Tunggu 3 detik sebelum mengunduh file
+        setTimeout(() => {
+          // Simulasi pengunduhan file (ganti URL sesuai dengan lokasi file)
+          const Katalog = document.createElement('a');
+          Katalog.href = 'https://wa.me/c/62882008025015';
+          document.body.appendChild(Katalog);
+          Katalog.click();
+          document.body.removeChild(Katalog);
+    
+          // Tutup SweetAlert setelah pengunduhan selesai
+          Swal.close();
+        }, 3000);
+      }
     });
 
-    // Tunggu 3 detik sebelum mengunduh file
-    setTimeout(() => {
-      // Simulasi pengunduhan file (ganti URL sesuai dengan lokasi file)
-      const downloadLink = document.createElement('a');
-      downloadLink.href = 'https://kayol.site/assets/katalog.pdf';
-      downloadLink.download = 'katalog.pdf';
-      document.body.appendChild(downloadLink);
-      downloadLink.click();
-      document.body.removeChild(downloadLink);
-
-      // Tutup SweetAlert setelah pengunduhan selesai
-      Swal.close();
-    }, 3000);
   }
