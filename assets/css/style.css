@@ -1,6 +1,6 @@
 /*
 
-KAYOL CODE SEMANGAT INOVASI
+SEMANGAT KAYOL
 
 */
 
@@ -569,7 +569,7 @@ header
   -o-transition: all 0.4s;
   -webkit-transition: all 0.4s;
   transition: all 0.4s;
-  background-color: #2a2a2a;
+  background-color: hsl(0, 0%, 16%);
   display: block;
   position: absolute;
   width: 30px;
