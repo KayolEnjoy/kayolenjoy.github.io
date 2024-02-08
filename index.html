@@ -1126,78 +1126,173 @@
     <i class="fas fa-chevron-up"></i>
   </button>
 
-    <script>
-            var schemaData = {
-          "@context": "http://schema.org",
-          "@type": "Service",
-          "name": "Kayol",
-          "description": "Jasa pembuatan website kota pekalongan website bisnis,website umkm,website sekolah,website yayasan,website katalog,profil bisnis. lengkap",
-          "url": "https://kayol.site/",
-          "price": "200000",
-          "priceCurrency": "IDR",
-          "image": "assets/images/iklan.jpeg",
-          "datePublished": "2023-12-10",
-          "dateModified": "2024-01-18",
-          "author": {
-            "@type": "Person",
-            "name": "Muhammad Rafif Sadid"
-          },
-          "publisher": {
-            "@type": "Organization",
-            "name": "KayolCode",
-            "logo": {
-              "@type": "ImageObject",
-              "url": "assets/images/logo.png",
-              "width": 200,
-              "height": 100,
-              "caption": "Kayol Website",
+  <script type="application/ld+json">
+    {
+      "@context": "http://schema.org",
+      "@type": ["Service", "Article", "Place", "Person", "Offer", "LocalBusiness"],
+      "name": "Kayol",
+      "description": "Jasa pembuatan website kota Pekalongan, website bisnis, website UMKM, website sekolah, website yayasan, website katalog, profil bisnis lengkap",
+      "url": "https://kayol.site/",
+      "priceRange": "Rp 200.000 - Rp 500.000",
+      "priceCurrency": "IDR",
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.3",
+        "bestRating": "5",
+        "worstRating": "0",
+        "ratingCount": "100"
+      },
+      "author": {
+        "@type": "Person",
+        "name": "Muhammad Rafif Sadid"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "KayolCode",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://kayol.site/assets/images/logo.png",
+          "width": 200,
+          "height": 100,
+          "caption": "Kayol Website"
+        }
+      },
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://kayol.site/assets/images/logo.png",
+        "caption": "Kayol Website",
+        "width": 152,
+        "height": 50
+      },
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Pringlangu gg4 Pekalongan Barat",
+        "addressLocality": "Pekalongan",
+        "postalCode": "51113",
+        "addressCountry": "Indonesia"
+      },
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+62-882-008025015",
+        "contactType": "Customer Service",
+        "areaServed": "ID",
+        "availableLanguage": "Indonesian"
+      },
+      "provider": {
+        "@type": "Organization",
+        "name": "Kayol",
+        "sameAs": [
+          "https://www.instagram.com/sadidft/",
+          "https://saweria.co/KayolGank?"
+        ]
+      },
+      "serviceType": "Web Design",
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Website Design Packages",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": ["Product","PriceSpecification"],
+              "name": "Pembuatan Website",
+              "description": "Berbagai paket kami tawarkan diantaranya paket pelajar,paket UMKM,dan pakat Bisnis",
+              "price": "Rp 200.000",
+              "priceCurrency": "IDR"
             }
           },
-          "logo": {
-            "@type": "ImageObject",
-            "url": "assets/images/logo.png",
-            "caption": "Kayol Website",
-            "width": 152,
-            "height": 50
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": ["Product","PriceSpecification"],
+              "name": "Project Robotik",
+              "description": "Kami bersedia merancang sampai membuatkan project IOT,robotik atau Mini pc project",
+              "price": "Rp 50.000 - Rp 1.000.000",
+              "priceCurrency": "IDR"
+            }
           },
-          "address": {
-            "@type": "PostalAddress",
-            "streetAddress": "Pringlangu gg4 Pekalongan Barat",
-            "addressLocality": "Pekalongan",
-            "postalCode": "51113",
-            "addressCountry": "Indonesia"
-          },
-          "contactPoint": {
-            "@type": "ContactPoint",
-            "telephone": "+62-882-008025015",
-            "contactType": "Customer Service",
-            "areaServed": "ID",
-            "availableLanguage": "Indonesian"
-          },
-          "provider": {
-            "@type": "Organization",
-            "name": "Kayol",
-            "sameAs": [
-              "https://www.instagram.com/sadidft/",
-              "https://saweria.co/KayolGank?"
-            ]
-          },
-          "aggregateRating": {
-            "@type": "AggregateRating",
-            "ratingValue": "4.6",
-            "reviewCount": "47"
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": ["Product","PriceSpecification"],
+              "name": "Desain Logo & poster",
+              "description": "Kami juga bisa membuatkan berbagai poster sampai baliho.dari desain sampai cetak juga kami bisa",
+              "price": "Rp 15.000 - 500.000",
+              "priceCurrency": "IDR"
+            }
           }
-        };
-        
-        // Menambahkan markup ke halaman
-        var script = document.createElement('script');
-        script.type = 'application/ld+json';
-        script.textContent = JSON.stringify(schemaData);
-        document.head.appendChild(script);
-    </script>
-    <script>
-      
-    </script>
+        ]
+      },
+      "serviceOutput": [
+        {
+          "@type": "Thing",
+          "name": "Website UMKM pekalongan"
+        },
+        {
+          "@type": "Thing",
+          "name": "garansi 100%"
+        },
+        {
+          "@type": "Thing",
+          "name": "Tampilan menarik"
+        }
+      ],
+      "serviceAudience": {
+        "@type": "Audience",
+        "name": "Small Business Owners"
+      },
+      "serviceArea": {
+        "@type": "AdministrativeArea",
+        "name": "Pekalongan"
+      },
+      "hoursAvailable": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": [
+          "Monday",
+          "Tuesday",
+          "Wednesday",
+          "Thursday",
+          "Friday"
+        ],
+        "opens": "09:00",
+        "closes": "22:00"
+      },
+      "acceptedPaymentMethod": [
+        {
+          "@type": "PaymentMethod",
+          "name": "Cash"
+        },
+        {
+          "@type": "PaymentMethod",
+          "name": "Dana"
+        },
+        {
+          "@type": "PaymentMethod",
+          "name": "BCA"
+        },
+        {
+          "@type": "PaymentMethod",
+          "name": "BNI"
+        },
+        {
+          "@type": "PaymentMethod",
+          "name": "BRI"
+        },
+        {
+          "@type": "PaymentMethod",
+          "name": "Mandiri"
+        },
+        {
+          "@type": "PaymentMethod",
+          "name": "Alfamart"
+        },
+        {
+          "@type": "PaymentMethod",
+          "name": "Indomart"
+        }
+      ]
+    }
+  </script>
   <!-- Scripts -->
   <script src="vendor/jquery/jquery.min.js"></script>
   <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
