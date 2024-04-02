@@ -1,3 +1,11 @@
+let docTitle = document.title;
+window.addEventListener("blur", () =>{
+  document.title = "Website 100ribu ? Kunjungi aku lagi!!";
+})
+window.addEventListener("focus", () =>{
+  document.title = docTitle;
+})
+
 document.addEventListener("DOMContentLoaded", function() {
     const changingEmTextElement = document.getElementById("changingEmText");
     const textOptions = ["Kreatif", "Pintar "];
@@ -70,15 +78,14 @@ function checkWebsite(event) {
     // Menambahkan jeda selama 2 detik sebelum melanjutkan pemeriksaan
     setTimeout(() => {
         const registeredWebsites = [
-            { websiteName: 'lmao.shop', emailname: 'sugichanel@gmail.com' },
-            { websiteName: 'sukiroku.online', emailname: 'jancokpedia@gmail.com' },
-            { websiteName: 'bibitrakyat.com', emailname: 'indonesiatanam@gmail.com' }
+            { websiteName: 'lmao.shop' },
+            { websiteName: 'sukiroku.online' },
+            { websiteName: 'yellownetcctv.com' }
         ];
 
         const websiteNameInput = document.getElementById('websiteName').value;
-        const emailInput = document.getElementById('emailname').value;
 
-        const isRegistered = registeredWebsites.some(site => site.websiteName === websiteNameInput && site.emailname === emailInput);
+        const isRegistered = registeredWebsites.some(site => site.websiteName === websiteNameInput);
 
         // Menutup alert yang menampilkan "Memeriksa Data Website...."
         Swal.close();
@@ -102,6 +109,7 @@ function checkWebsite(event) {
         }
     }, 2000); // Jeda selama 2 detik (2000 milidetik)
 }
+// Fungsi pengiriman API Emailjs
 function sendEmail() {
     Swal.fire({
         icon: 'info',
@@ -137,11 +145,77 @@ function sendEmail() {
             Swal.fire({
                 icon: 'error',
                 title: 'Error!',
-                text: 'Gagal mengirim email. Silakan coba lagi nanti.',
+                text: 'Gagal mengirim pesan. Silakan coba lagi nanti.',
                 confirmButtonText: 'Ok'
             });
         });
 }
+// Fungsi untuk mengirim pesan ke WhatsApp menggunakan API fonnte
+function sendWhatsAppMessage() {
+  // Ambil nilai dari input formulir
+  const user_name = document.getElementById('name').value;
+  const user_email = document.getElementById('email').value;
+  const subject = document.getElementById('subject').value;
+  const message = document.getElementById('message').value;
+  const phone_number = '6285803537375'; // Nomor penerima WhatsApp
+
+
+  // Data yang akan dikirimkan ke API fonnte
+  const data = {
+      user_name: user_name,
+      user_email: user_email,
+      subject: subject,
+      message: message,
+      phone_number: phone_number
+  };
+
+  // Kirim pesan ke WhatsApp melalui API fonnte
+  fetch('https://api.fonnte.com/whatsapp/send', {
+      method: 'POST',
+      headers: {
+          'Content-Type': 'application/json',
+          'Authorization': 'c13qAumT5CT_g3h-hibQ' // Ganti dengan kunci API fonnte Anda
+      },
+      body: JSON.stringify(data)
+  })
+  .then(response => {
+      if (response.ok) {
+          // Pesan berhasil dikirim
+          Swal.fire({
+              icon: 'success',
+              title: 'Pesan Terkirim!',
+              text: 'Terima kasih atas pesan Anda.',
+              confirmButtonText: 'Ok'
+          });
+          document.getElementById('contactForm').reset(); // Reset formulir setelah pengiriman berhasil
+      } else {
+          // Gagal mengirim pesan
+          Swal.fire({
+              icon: 'error',
+              title: 'Error!',
+              text: 'Gagal mengirim pesan. Silakan coba lagi nanti.',
+              confirmButtonText: 'Ok'
+          });
+      }
+  })
+  .catch(error => {
+      console.error('Error:', error);
+      // Gagal mengirim pesan
+      Swal.fire({
+          icon: 'error',
+          title: 'Error!',
+          text: 'Gagal mengirim pesan. Silakan coba lagi nanti.',
+          confirmButtonText: 'Ok'
+      });
+  });
+}
+
+// Menambahkan event listener ke formulir untuk menangani pengiriman pesan
+document.getElementById('contactForm').addEventListener('submit', function(event) {
+  event.preventDefault(); // Mencegah perilaku bawaan formulir
+  sendWhatsAppMessage(); // Panggil fungsi untuk mengirim pesan WhatsApp
+});
+
 function pilihtemplate() {
     // Menggunakan window.location untuk mengarahkan ke URL
     window.location.href = 'template';
